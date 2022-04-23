@@ -1,0 +1,225 @@
+
+		if self.save > self.width - 1000:
+			self.speed = 0 
+
+class HoangSpider:
+	def __init__(self):
+		self.x = 0
+		self.y = 120
+		self.list = [pygame.image.load(f).convert_alpha() for f in glob("spiderman/spider*.png")[1:]]
+		self.counter = 0
+		self.image = self.list[0]
+		self.dir = "right"	
+		self.save = 0
+		self.width = self.image.get_width()
+	def draw(self, screen):
+		self.counter += .1
+		if self.counter >= len(self.list):
+			self.counter = 0
+		if self.dir == "right":
+			self.image = self.list[int(self.counter)]
+		screen.blit(self.image, (self.x, self.y))
+	def update(self):
+		self.save += 10 
+		if self.save > speedcar1 and self.save < backgroundmainimg.get_width() - 1000:
+			self.x += random.randint(-3,3)
+		if self.save > backgroundmainimg.get_width() - 1000:
+			self.x += 5
+			if self.x > 1000 - self.width:
+				self.x = 1000 - self.width
+		if self.save < speedcar1:
+			self.x += 2	
+class GiaHulk:
+	def __init__(self):
+		self.x = 0
+		self.y = 500
+		self.list = [pygame.image.load(f).convert_alpha() for f in glob("hulk/hulk*.png")[1:]]
+		self.counter = 0
+		self.image = self.list[0]
+		self.dir = "right"	
+		self.save = 0
+		self.width = self.image.get_width()
+	def draw(self, screen):
+		self.counter += .1
+		if self.counter >= len(self.list):
+			self.counter = 0
+		if self.dir == "right":
+			self.image = self.list[int(self.counter)]
+		screen.blit(self.image, (self.x, self.y))
+	def update(self):
+		self.save += 10 
+		if self.save > speedcar5 and self.save < backgroundmainimg.get_width() - 1000:
+			self.x += random.randint(-3,3)
+		if self.save > backgroundmainimg.get_width() - 1000:
+			self.x += 5
+			if self.x > 1000 - self.width:
+				self.x = 1000 - self.width
+		if self.save < speedcar5:
+			self.x += 2					
+
+class HaoCaptain:
+	def __init__(self):
+		self.x = 0
+		self.y = 600
+		self.list = [pygame.image.load(f).convert_alpha() for f in glob("captain/cap*.png")[1:]]
+		self.counter = 0
+		self.image = self.list[0]
+		self.dir = "right"	
+		self.save = 0
+		self.width = self.image.get_width()
+	def draw(self, screen):
+		self.counter += .1
+		if self.counter >= len(self.list):
+			self.counter = 0
+		if self.dir == "right":
+			self.image = self.list[int(self.counter)]
+		screen.blit(self.image, (self.x, self.y))
+	def update(self):
+		self.save += 10 
+		if self.save > speedcar6 and self.save < backgroundmainimg.get_width() - 1000:
+			self.x += random.randint(-3,3)
+		if self.save > backgroundmainimg.get_width() - 1000:
+			self.x += 5
+			if self.x > 1000 - self.width:
+				self.x = 1000 - self.width
+		if self.save < speedcar6:
+			self.x += 2			
+
+class HieuBlack:
+	def __init__(self):
+		self.x = 0
+		self.y = 200
+		self.list = [pygame.image.load(f).convert_alpha() for f in glob("black/black*.png")[1:]]
+		self.counter = 0
+		self.image = self.list[0]
+		self.dir = "right"
+		self.save = 0
+		self.width = self.image.get_width()
+	def draw(self,screen):
+		self.counter += .1
+		if self.counter >= len(self.list):
+			self.counter = 0
+		if self.dir == "right":
+			self.image = self.list[int(self.counter)]
+		screen.blit(self.image, (self.x, self.y))
+	def update(self):
+		self.save += 10 
+		if self.save > speedcar2 and self.save < backgroundmainimg.get_width() - 1000:
+			self.x += random.randint(-3,3)
+		if self.save > backgroundmainimg.get_width() - 1000:
+			self.x += 5
+			if self.x > 1000 - self.width:
+				self.x = 1000 - self.width
+		if self.save < speedcar2:
+			self.x += 2
+
+class DuyIron:
+	def __init__(self):
+		self.x = 0
+		self.y = 300
+		self.list = [pygame.image.load(f).convert_alpha() for f in glob("iron man/iron*.png")[1:]]
+		self.counter = 0
+		self.image = self.list[0]
+		self.dir = "right"
+		self.save = 0
+		self.width = self.image.get_width()
+	def draw(self,screen):
+		self.counter += .1
+		if self.counter >= len(self.list):
+			self.counter = 0
+		if self.dir == "right":
+			self.image = self.list[int(self.counter)]
+		screen.blit(self.image, (self.x, self.y))
+	def update(self):
+		self.save += 10 
+		if self.save > speedcar3 and self.save < backgroundmainimg.get_width() - 1000:
+			self.x += random.randint(-3,3)
+		if self.save > backgroundmainimg.get_width() - 1000:
+			self.x += 5
+			if self.x > 1000 - self.width:
+				self.x = 1000 - self.width
+		if self.save < speedcar3:
+			self.x += 2
+
+class HungThor:
+	def __init__(self):
+		self.x = 0
+		self.y = 410
+		self.list = [pygame.image.load(f).convert_alpha() for f in glob("thor/thor*.png")[1:]]
+		self.counter = 0
+		self.image = self.list[0]
+		self.dir = "right"
+		self.save = 0
+		self.width = self.image.get_width()
+	def draw(self,screen):
+		self.counter += .1
+		if self.counter >= len(self.list):
+			self.counter = 0
+		if self.dir == "right":
+			self.image = self.list[int(self.counter)]
+		screen.blit(self.image, (self.x, self.y))
+	def update(self):
+		self.save += 10 
+		if self.save > speedcar4 and self.save < backgroundmainimg.get_width() - 1000:
+			self.x += random.randint(-3,3)
+		if self.save > backgroundmainimg.get_width() - 1000:
+			self.x += 5
+			if self.x > 1000 - self.width:
+				self.x = 1000 - self.width
+		if self.save < speedcar4:
+			self.x += 2
+
+class skillofIronMan():
+	def __init__(self):
+		self.img = pygame.image.load('startup.png')
+		self.width = self.img.get_width()
+		self.height = self.img.get_height()
+		self.distance = 12000
+		self.save = 0
+		self.x = -10000 - self.distance
+		self.y = 300
+	def draw(self):
+		
+
+
+def gamestart(bg, hoang, hieu, duy, hung, gia, hao):
+	bg.__init__()
+	hoang.__init__()
+	hieu.__init__()
+	duy.__init__()
+	hung.__init__()
+	gia.__init__()
+	hao.__init__()
+	while True:
+		screen.fill((0,0,0))
+		for event in pygame.event.get():
+			if event.type == QUIT:
+				pygame.quit()
+				sys.exit()
+		bg.draw(screen)
+		bg.update()
+		hoang.draw(screen)
+		hoang.update()
+		hieu.draw(screen)
+		hieu.update()
+		duy.draw(screen)
+		duy.update()
+		hung.draw(screen)
+		hung.update()
+		hao.draw(screen)
+		hao.update()
+		gia.draw(screen)
+		gia.update()
+		pygame.display.update()
+		fpsclock.tick(60)
+
+def special():
+	bg = backgroundamin()
+	hoang = HoangSpider()
+	hieu = HieuBlack()
+	duy = DuyIron()
+	hung = HungThor()
+	hao = HaoCaptain()
+	gia = GiaHulk()
+	while True:
+		gamestart(bg, hoang, hieu, duy, hung, gia, hao)
